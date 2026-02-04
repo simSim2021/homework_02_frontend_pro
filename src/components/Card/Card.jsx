@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export function Card(){
+ function Card(){
     return (
         <div className="homework_02_wrapper">
             <div className="simpson_card">
@@ -14,3 +14,5 @@ export function Card(){
         </div>
     );
 }
+
+export default Card;
