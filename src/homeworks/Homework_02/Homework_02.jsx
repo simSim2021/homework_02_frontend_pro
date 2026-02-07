@@ -1,4 +1,4 @@
-import  Card  from "../../components/Card/Card";
+import  SimpsonsCard  from "../../components/Card/SmpsonsCard";
 
 function Homework_02(){
     return(
