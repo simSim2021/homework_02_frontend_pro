@@ -2,31 +2,57 @@ import "./styles.css";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 
-function LoginForm(){
+function LoginForm() {
+  // const CLICK_ME_BUTTON = document.querySelector("#clickme_button");
 
-    return <div className="login_form">
-        <p className="form_name">Login form</p>
+  // const login = () => {
+  //   console.log("login");
+  // };
+
+  // CLICK_ME_BUTTON.addEventListener("click", login);
+
+  // C передачей аргументов
+  // const login = (message) => {
+  //   console.log("Button login works!!!");
+  //   alert(message);
+  // };
+
+  // Без передачи аргументов
+  const login = (event) => {
+    event.preventDefault();
+    console.log("Button login works!!!");
+  };
+
+  return (
+    <form onSubmit={login} className="login-form-container">
+      <p className="title">Login form</p>
+      <div className="inputs-container">
         <Input
-        label="Email"
-        name="email"
-        placeholder="Enter your email"        
-        type="email"
-        
+          id="email-id"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          label="Email"
         />
         <Input
-        label="Password"
-        name="password"
-        placeholder="Enter your password"        
-        type="password"
-        
+          id="password-id"
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+          label="Password"
         />
-        <Button
-        name="Login"
-        
-        
-            />
-    
-    </div>
+      </div>
+      <Button name="Login" type="submit" />
+      {/* Без передачи аргументов функции login */}
+      {/* <button onClick={login} type="button">
+        Login
+      </button> */}
+      {/* C передачей аргументов функции login */}
+      {/* <button onClick={() => login("Hello from argument of fuction login")} type="button">
+        Login
+      </button> */}
+    </form>
+  );
 }
 
 export default LoginForm;

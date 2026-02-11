@@ -1,19 +1,23 @@
 import "./styles.css";
 
-function Input ({name, type, placeholder, label}) {
-
-    return <div className="form_input">
-<label className="input_label" htmlFor="email">{label} 
-
-</label>
-<input 
-id="email"
-name={name}
-placeholder={placeholder}
-type={type}
-/>
-
-   </div>
+// function Input(props) {
+//   console.log(props);
+//   const { id, name, type, placeholder, label } = props;
+function Input({ id, name, type, placeholder, label }) {
+  return (
+    <div className="input-wrapper">
+      <label className="input-label" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        className="input-component"
+        id={id}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+      />
+    </div>
+  );
 }
 
 export default Input;

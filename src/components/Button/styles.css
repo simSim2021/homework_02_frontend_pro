@@ -6,8 +6,8 @@
   border: none;
   padding: 0;
   height: 70px;
-  width: 470px;
-  background-color: rgb(31, 39, 245);
+  width: 100%;
+  background-color: rgb(82, 82, 241);
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -17,5 +17,5 @@
 }
 
 .button_component:hover {
-  background-color: rgb(31, 39, 245);
+  background-color: rgb(104, 104, 233);
 }
