@@ -19,7 +19,7 @@ const handleLike = ()=>{
 
 const handleDislike = ()=>{
     setDislike ((prevValue) =>{
-        return prevValue -1;
+        return prevValue +1;
     }
 
     )
@@ -32,19 +32,19 @@ const handleReset =()=>{
 
     return(
 
-        <div className="feedback_wrapper">
-            <div className="button_control">
-            <Button name="Like" onClick={handleLike}/>
-            </div>
-            <p className="count">{like}</p>
-            <div className="button_control">
-                <Button name="Dislike" onClick={handleDislike}/>
-            </div>
-            <p className="count">{dislike}</p>
-            <div className="button_control">
-                <Button name="Reset Results" onClick={handleReset}/>
-            </div>
+        <div className="feedback-wrapper">
+      <div className="feedback-control">
+        <div className="buttonwithcount-container">
+          <Button name="Like" onClick={handleLike} />
+          <p className="count">{like}</p>
         </div>
+        <div className="buttonwithcount-container">
+          <Button name="Dislike" onClick={handleDislike} />
+          <p className="count">{dislike}</p>
+        </div>
+      </div>
+      <Button name="Reset Results" onClick={handleReset} />
+    </div>
     )
 }
 
