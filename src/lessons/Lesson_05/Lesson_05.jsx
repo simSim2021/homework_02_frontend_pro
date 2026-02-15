@@ -48,12 +48,23 @@ const finalOrder = order.map((orderEl)=>{
   
 console.log(finalOrder);
 
+//массив имен кнопок (menu)
+const menuButtons = ["Burger", "Fries", "Cola", "Salad", "Ketchup", "Ice-cream"];
+
+//кнопки через map
+const menuButtonsJSX = menuButtons.map((name) => (
+    <div className="button_control" key={name}>
+      <Button name={name} onClick={() => addMenuElement(name)} />
+    </div>
+  ));
+
+
   return (
     <div className="lesson_05_wrapper">
       <div className="menu_wrapper">
         <h1 className="menu">Menu:</h1>
-        <div className="button_wrapper">
-          <div className="button_control">
+        <div className="button_wrapper">{menuButtonsJSX}</div>
+          {/* <div className="button_control">
             <Button name="Burger" onClick={()=>addMenuElement("Burger")} />
           </div>
           <div className="button_control">
@@ -70,8 +81,9 @@ console.log(finalOrder);
           </div>
           <div className="button_control">
             <Button name="Ice-cream" onClick={()=>addMenuElement("Ice-cream")} />
-          </div>
-        </div>
+          </div> */}
+
+
       </div>
 
       <div className="order_wrapper">
